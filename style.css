@@ -22,17 +22,9 @@ h1 {
   font-size: 2rem;
 }
 
-button,
-i {
-  cursor: pointer;
-}
-
 .container {
   width: 100%;
-  max-width: 800px;
-  padding: 64px;
-  border: 1px solid #ddd;
-  border-radius: 32px;
+  max-width: 640px;
 }
 
 .input-search-btn-container {
@@ -40,30 +32,40 @@ i {
   gap: 4px;
 }
 
-#input,
+#input-word,
 #search-btn {
   padding: 16px 20px;
   border: 1px solid #000;
 }
 
-#input {
+#input-word {
   width: 100%;
-  border-radius: 12px 0 0 12px;
+  border-radius: 100px 0 0 100px;
 }
 
 #search-btn {
   width: 240px;
-  border-radius: 0 12px 12px 0;
+  border-radius: 0 100px 100px 0;
+  cursor: pointer;
 }
 
-.result-container {
-  margin-top: 64px;
+.dynamic-result-container {
+  margin-top: 16px;
+  padding: 48px;
+  border: 1px solid #ddd;
+  border-radius: 32px;
 }
 
 .word-volume-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+#pronunciation-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 #phonetic {
@@ -78,30 +80,25 @@ i {
 #example {
   margin-top: 48px;
   padding: 6px 10px;
-  border-left: 1px solid #000;
+  border-left: 1px solid #707070;
   font-weight: 200;
   font-style: italic;
 }
 
-@media (max-width: 768px) {
-  .container {
-    padding: 48px;
-  }
-
-  #search-btn {
-    width: 160px;
-  }
+.error-message {
+  justify-self: center;
+  margin-top: 16px;
 }
 
 @media (max-width: 480px) {
-  .container {
+  .dynamic-result-container {
     padding: 32px;
   }
 
   .input-search-btn-container {
     flex-direction: column;
   }
-  #input,
+  #input-word,
   #search-btn {
     width: 100%;
     border-radius: 12px;

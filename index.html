@@ -16,34 +16,24 @@
     <link rel="stylesheet" href="style.css" />
 
     <link rel="icon" href="assets/images/language.svg" type="image/svg+xml" />
+
+    <script src="main.js" defer></script>
   </head>
 
   <body>
     <section class="container">
       <div class="input-search-btn-container">
-        <input type="text" id="input" placeholder="Type the word here ..." />
-        <button type="button" id="search-btn">Search</button>
+        <input
+          type="text"
+          id="input-word"
+          placeholder="Type the word here ..."
+        />
+        <button id="search-btn">Search</button>
       </div>
 
-      <div class="result-container">
-        <div>
-          <div class="word-volume-container">
-            <h1>Word</h1>
-            <i class="fa-solid fa-volume-high"></i>
-          </div>
+      <div class="result-container"></div>
 
-          <p id="phonetic">/wɝːd/</p>
-
-          <p id="meaning">
-            a single unit of language that has meaning and can be spoken or
-            written.
-          </p>
-
-          <p id="example">
-            Your essay should be no more than two thousand words long.
-          </p>
-        </div>
-      </div>
+      <audio id="pronunciation"></audio>
     </section>
   </body>
 </html>
